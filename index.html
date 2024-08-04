@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegant Interiors - Interior Design Company</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/counter.css">
+    <link rel="stylesheet" href="css/abt.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="ft.css">
+    <link rel="stylesheet" href="btm.css">
+    <link rel="stylesheet" href="vd.css">
+ 
+</head>
+<body>
+    <header>
+        
+        <nav>
+            <div class="logo">Wudleaf</div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">our Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <img src="https://lh3.googleusercontent.com/PY1DutN6sT2LzPyYcY2aluik-TgvHYJszE081INPegGGV4OIE7y9NtMHPeodrz0bwscqbGmAt73r0oGNRMGKKPY=w16383" alt="" style="width: 50%; padding-bottom:0;">
+            
+            <h1>Welcome to Wudleaf Interiors</h1>
+        
+        </section>
+
+        <section id="about" class="about">
+            <h2>About Us</h2>
+       
+            <div class="read-more-container">
+                <p class="read-more-text">
+                    <b>Wudleaf Interior Solutions </b>is a leading interior company based in Malappuram district, Kerala began with furniture manufacturing and gradually upgraded to assist in total interior solutions. With an experience of over 20 years of working on 1000+ projects across Kerala, we assure you a better choice of sustainable furniture with supreme quality, innovative designs, and elegant style. We never compromise in providing the best-customised furniture and customer service that has gained the trust of our clients all over Kerala.
+
+
+The company employs a diverse workforce of skilled workers and carpenters from the production unit, expert designers, and site supervisors who guarantee to bring the best output that exceeds the client's imagination. We are proud to have these highly professional and committed team members to manufacture quality-assured products and implement positive change. The innovative approach utilising the company's modern pieces of equipment to produce super-comfortable furniture enables it to increase efficiency and remain competitive in today's ever-changing trends in the market.
+
+
+Our expertise lies in impeccable craftsmanship to create authentic and classy furniture made with passion in our factory outlet. Being long-lasting and trend-setter collections, you can choose accessories to accommodate the most diverse interiors of the residential and cooperative sectors. Despite an increasingly competitive business environment, we promise to create the best value for the product that delivers true satisfaction to our customers.
+
+
+The customer is the king. Therefore, we aim to give the best choice after planning and modifying it according to the client's suggestions and budget. Engagement with the clients is significant when choosing the suitable material, design, theme, and colour, evaluating the dimensions, and manufacturing the accessories. We help you shape your dream design and assist it in installation into the space within the provided time too.</p>
+                <center><button class="read-more-btn">Read More</button></center>
+            </div>
+
+        </section>
+
+
+        <div class="video-section">
+            <div class="video-container" onclick="togglePlay()">
+                <video id="myVideo">
+                    <source src="adv.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <button class="play-pause-btn pulse" id="playPauseBtn">
+                    <i class="fas fa-play"></i>
+                </button>
+            </div>
+        </div>
+    
+        <script>
+            const video = document.getElementById('myVideo');
+            const btn = document.getElementById('playPauseBtn');
+            const icon = btn.querySelector('i');
+    
+            function togglePlay() {
+                if (video.paused) {
+                    video.play();
+                    btn.style.display = 'none';
+                } else {
+                    video.pause();
+                    showPlayButton();
+                }
+            }
+    
+            function showPlayButton() {
+                btn.style.display = 'flex';
+                icon.className = 'fas fa-play';
+                btn.classList.add('pulse');
+            }
+    
+            video.addEventListener('ended', showPlayButton);
+    
+            // Prevent the click on the button from triggering the video container's click event
+            btn.addEventListener('click', function(event) {
+                event.stopPropagation();
+                togglePlay();
+            });
+        </script>
+
+
+
+
+
+
+
+
+
+        <section id="services" class="services">
+            <h2>Our Services</h2>
+            <div class="service-list">
+                <div class="service-item fade-in">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="Residential Design">
+                    <h3>Residential Design</h3>
+                    <p>Create your dream home with our personalized residential design services.</p>
+                </div>
+         
+                <div class="service-item fade-in">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80" alt="Commercial Design">
+                    <h3>Interior Design</h3>
+                    <p>Transform your business space to impress clients and boost productivity.</p>
+                </div>
+               
+                <div class="service-item fade-in">
+                    <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="3D Visualization">
+                    <h3>3D Visualization</h3>
+                    <p>See your design come to life with our state-of-the-art 3D rendering services.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="portfolio">
+            <h2>Our Projects</h2>
+            <div class="portfolio-container">
+                <div class="slider-box">
+                    <h3>Living Rooms</h3>
+                    <div class="slider-container">
+                        <div class="slider-image fade-in">
+                            <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80" alt="Living Room 1">
+                        </div>
+                        <div class="slider-image fade-in">
+                            <img src="https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="Living Room 2">
+                        </div>
+                        <div class="slider-image fade-in">
+                            <img src="https://images.unsplash.com/photo-1617806118233-18e1de247200?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80" alt="Living Room 3">
+                        </div>
+                        <a class="prev" onclick="changeSlide(-1, 0)">&#10094;</a>
+                        <a class="next" onclick="changeSlide(1, 0)">&#10095;</a>
+                    </div>
+                </div>
+                <div class="slider-box">
+                    <h3>Kitchens</h3>
+                    <div class="slider-container">
+                        <div class="slider-image fade-in">
+                            <img src="https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="Kitchen 1">
+                        </div>
+                        <div class="slider-image fade-in">
+                            <img src="https://images.unsplash.com/photo-1556909212-d5b604d0c90d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="Kitchen 2">
+                        </div>
+                        <div class="slider-image fade-in">
+                            <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1568&q=80" alt="Kitchen 3">
+                        </div>
+                        <a class="prev" onclick="changeSlide(-1, 1)">&#10094;</a>
+                        <a class="next" onclick="changeSlide(1, 1)">&#10095;</a>
+                    </div>
+                </div>
+                <div class="slider-box">
+                    <h3>Bedrooms</h3>
+                    <div class="slider-container">
+                        <div class="slider-image fade-in">
+                            <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="Bedroom 1">
+                        </div>
+                        <div class="slider-image fade-in">
+                            <img src="https://images.unsplash.com/photo-1617325247661-675ab4b64b12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fG
+                            <img src="https://images.unsplash.com/photo-1617325247661-675ab4b64b12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80" alt="Bedroom 2">
+                        </div>
+                        <div class="slider-image fade-in">
+                            <img src="https://images.unsplash.com/photo-1616486029423-aaa4789e8c9a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80" alt="Bedroom 3">
+                        </div>
+                        <a class="prev" onclick="changeSlide(-1, 2)">&#10094;</a>
+                        <a class="next" onclick="changeSlide(1, 2)">&#10095;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+  
+       
+            <div class="container">
+                <div class="box" id="box1">
+                    <i class="icon fas fa-project-diagram"></i>
+                    <h2>Projects</h2>
+                    <div class="count-wrapper">
+                        <span class="count" data-target="19">0</span><span>+</span>
+                    </div>
+                </div>
+                <div class="box" id="box2">
+                    <i class="icon fas fa-users"></i>
+                    <h2>Clients</h2>
+                    <div class="count-wrapper">
+                        <span class="count" data-target="50">0</span><span>+</span>
+                    </div>
+                </div>
+                <div class="box" id="box3">
+                    <i class="icon fas fa-clock"></i>
+                    <h2>Years</h2>
+                    <div class="count-wrapper">
+                        <span class="count" data-target="10">0</span>
+                    </div>
+                </div>
+            </div>
+        
+      <script src="cnt.js"></script>
+      <script src="main.js"></script>
+
+
+     
+</head>
+<body>
+    <footer class="footer" id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/wudleaf_interiors?igsh=cnY3OGJxajU2aXhv" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="wa.me/+919744900025" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://youtube.com/@wudleaf?si=XkmycjUdtXGUWffj" target="_blank"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <div class="contact-info">
+                    <p><i class="fas fa-phone"></i> <a href="tel:+919744900025">+919744900025</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:wudlleaf@gmail.com">wudlleaf@gmail.com</a></p>
+                    <!--<p><i class="fas fa-map-marker-alt"></i></p>State higway 28, Opposite Tvs, Valluvambram, Malappuram, Kerala -->
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Location</h3>
+                <div class="map-container">
+                    <iframe 
+                   
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d802.8231675499608!2d76.05341960460491!3d11.125479742581753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba64991ec03f0bb%3A0x35b548f3bd721474!2swudleaf%20interiors!5e1!3m2!1sen!2sin!4v1722773714609!5m2!1sen!2sin" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <footer class="footerap">
+        <div class="footer-icon" onclick="scrollToTop()" data-tooltip="Scroll to Top">
+            <i class="fas fa-arrow-up"></i>
+        </div>
+        <a href="tel:+919744900025" class="footer-icon pulseu" data-tooltip="Call Us">
+            <i class="fas fa-phone"></i>
+        </a>
+    </footer>
+
+    <script>
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+
+    <footer>
+        <p>&copy; 2023 Elegant Interiors. All rights reserved.</p>
+    </footer>
+
+   
+</body>
+</html>

@@ -1,0 +1,78 @@
+.footerap {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(51, 51, 51, 0.8);
+    padding: 10px 20px;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.footer:hover {
+    background-color: rgba(51, 51, 51, 1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.footer-icon {
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0 15px;
+    position: relative;
+}
+
+.footer-icon:hover {
+    color: #4a90e2;
+    transform: translateY(-3px);
+}
+
+.footer-icon::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.footer-icon:hover::after {
+    opacity: 1;
+    visibility: visible;
+    bottom: 130%;
+}
+
+@keyframes pulse8 {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.footer-icon.pulse8 {
+    animation: pulse 1.5s infinite;
+}
+
+@media (max-width: 768px) {
+    .footerap {
+        padding: 8px 15px;
+    }
+
+    .footer-icon {
+        font-size: 18px;
+        margin: 0 10px;
+    }
+}

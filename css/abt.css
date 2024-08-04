@@ -1,0 +1,78 @@
+<style>
+                @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        
+        
+                .read-more-container {
+                    background-color: #ffffff;
+                    
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                    padding: 0px;
+               
+                    transition: all 0.3s ease;
+                }
+        
+                .read-more-container:hover {
+                    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+                }
+        
+                .read-more-text {
+                    display: -webkit-box;
+                    -webkit-line-clamp: 10;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    transition: all 0.5s ease;
+                    position: relative;
+                    text-align: justify;
+                }
+        
+                .read-more-text::after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    left: 0;
+                    height: 30px;
+                    background: linear-gradient(transparent, #ffffff);
+                    transition: opacity 0.3s ease;
+                }
+        
+                .read-more-text.expanded {
+                    -webkit-line-clamp: unset;
+                }
+        
+                .read-more-text.expanded::after {
+                    opacity: 0;
+                }
+        
+                .read-more-btn {
+                    background-color: #4a90e2;
+                    border: none;
+                    color: white;
+                    padding: 12px 24px;
+                    text-align: center;
+                    text-decoration: none;
+                    display: flexbox;
+                    font-size: 16px;
+                    margin-top: 15px;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    border-radius: 30px;
+                    font-weight: 600;
+                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                }
+        
+                .read-more-btn:hover {
+                    background-color: #357ae8;
+                    transform: translateY(-2px);
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+                }
+        
+                .read-more-btn:active {
+                    transform: translateY(0);
+                }
+        
+                @keyframes fadeIn {
+                    from { opacity: 0; }
+                    to { opacity: 1; }
+                }
+            </style>
